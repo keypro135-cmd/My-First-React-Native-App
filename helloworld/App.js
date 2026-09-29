@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   const [fullname, setFullname] = useState("Andrii");
@@ -9,6 +9,10 @@ export default function App() {
       <Text style={styles.paragraph}>
         Hello, World, {fullname}
       </Text>
+
+      <TextInput
+        onChangeText={(text) => setFullname(text)}
+      />
     </View>
   );
 }
